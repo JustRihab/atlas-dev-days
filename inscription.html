@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="La première conférence dédiée aux développeurs web au Maroc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https//font-awesome.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Atlas Dev Days</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/Screenshot 2026-10-07 161023.png">
+            <div class="title">
+                <p>Atlas Dev</p>
+                <p>Days</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-btn">Accueil</a>
+            <a href="programme.html" class="nav-btn">Programme</a>
+            <a href="intervenants.html" class="nav-btn">Intervenants</a>
+            <a href="inscription.html" class="nav-btn active">Inscription</a>
+        </nav>    
+    </header>
+    <main class="inscription-main">
+        <img src="/images/pexels-bbso-515173315-20733081.jpg" alt="Conference Audience">
+        <h1>Formulaire d'Inscription</h1>
+        <form>
+            <label for="full name">nom complet :</label>
+            <input type="text" id="full name" placeholder="Entrez votre nom complet" required minlength="3"><br>
+
+            <label for="email">email :</label>
+            <input type="email" id="email" placeholder="Entrez votre email" required minlength="3"><br>
+
+            <label for="Phone number">numéro de téléphone :</label>
+            <input type="tel" id="tel" name="tel" placeholder="Entrez votre numéro téléphone" required pattern="^(\+212|0)[5-7][0-9]{8}$"><br>
+
+            <label for="Profil">Profil :</label>
+            <select id="profil" required>
+                <option value="">Veuillez entrez votre profil :</option>
+                <option value="Etudiant">Etudient</option>
+                <option value="Developer">Developer</option>
+                <option value="programmer">Programmer</option>
+                <option value="Autre">Autre</option>
+            </select>
+            <br>
+
+            <p>Ateliers</p>
+            <input type="checkbox" id="atelier1" name="atelier1" value="Atelier 1">
+            <label for="atelier1">Atelier 1: Maîtriser Flexbox et Grid sans Framework</label><br>
+            <input type="checkbox" id="atelier2" name="atelier2" value="Atelier 2">
+            <label for="atelier2">Atelier 2: Introduction à Node.js</label><br>
+            <input type="checkbox" id="atelier3" name="atelier3" value="Atelier 3">
+            <label for="atelier3">Atelier 3: Construire des APIs REST Robustes</label><br>
+            
+            <label for="jour">Journée(s) de participation :</label>
+            <div class="events-days">
+                <input type="radio" id="jour1" value="jour1" required> 
+                <label for="jour1">Jour 1 - 5 Octobre</label>
+                <input type="radio" id="jour2" value="jour2" required> 
+                <label for="jour">Jour 2 - 6 Octobre</label>
+                <input type="radio" id="both" value="deux jours" required> 
+                <label for="deux jours">Les deux</label>
+            </div>
+
+            <label for="message">Message</label>
+            <textarea type="text" placeholder="Laissez un message"></textarea>
+
+            <input type="checkbox" id="consentement" name="consentement" required>
+            <label for="consentement">J'accepte</label>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+        <section>
+            <h2>Informations pratique</h2>
+            <P><strong>Adresse :</strong>📍 Atlas Conference Center, Nador</P>
+            <P><strong>Horaires :</strong>⏰ 09:00 - 15:30</P>
+            <P><strong>Acces :</strong>Parking gratuit disponible.<br>
+            Accessible en taxi et en bus.</P>
+        </section>
+
+    </main>
+    <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>📧 contact@atlasdevdays.ma</p>
+            <p>📍 Atlas Conference Center, Maroc</p>
+        </div>
+        <div class="footer-section">
+            <h4>Suivez-nous</h4>
+            <div class="social-links">
+                <a href="https://LinkedIn.com" class="btn-social-media"><i class="fa-brands fa-linkedin"></i> </a>
+                <a href="https://Twitter.com" class="btn-social-media"><i class="fa-brands fa-twitter"></i> </a>
+                <a href="https://GitHub.com" class="btn-social-media"><i class="fa-brands fa-github"></i> </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Atlas Dev Days. Tous droits réservés.</p>
+    </div>
+</footer>
+</body>
+</html>
