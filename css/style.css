@@ -286,10 +286,6 @@ header {
     color: #ffffff;
 }
 
-/* ==========================================
-   INTERVENANTS PAGE STYLES
-   ========================================== */
-
 .intervenants-main {
     position: relative;
     max-width: 1200px;
@@ -357,14 +353,6 @@ header {
 
 .intervenants-infos article p strong {
     color: #3b82f6;
-}
-
-/* Responsive adjustment for small screens */
-@media (max-width: 900px) {
-    .intervenants-infos article {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
 }
 
 footer {
