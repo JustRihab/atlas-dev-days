@@ -355,6 +355,161 @@ header {
     color: #3b82f6;
 }
 
+.inscription-main img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.35;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 460px;
+    height: auto;
+    border-radius: 40px;
+    background-color: #020425;
+    padding: 20px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 2px 5px rgba(118, 110, 228, 0.3);
+}
+
+form label {
+    display: block;
+    margin: 14px 0 6px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #02132d;
+    border-radius: 5px;
+    transition: 0.3 ease-in-out;
+    box-shadow: 0.3 ease-in-out;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #797edf;
+    box-shadow: 0 0 0 3px rgba(102, 107, 200, 0.35);
+}
+
+form select {
+    height: 42px;
+}
+
+form textarea {
+    min-height: 10px;
+    resize: vertical;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+    width: auto;
+    margin: 0;
+    accent-color: #797edf;
+    cursor: pointer;
+}
+
+/* Labels next to checkboxes/radios stay on the same line (inline beats block) */
+.atelier-grp label,
+.events-days label,
+form label[for="consentement"] {
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.atelier-grp, .events-days {
+    display: flex;
+    flex-direction: column;  /* the rows stack vertically: row 1, row 2, row 3 */
+    gap: 10px;               /* 10px of space between rows */
+    margin: 8px 0 4px;
+}
+
+.choice {
+    display: flex;           /* inside one row: items side by side */
+    align-items: center;     /* checkbox vertically centered against the text */
+    gap: 10px;               /* space between the checkbox and its label */
+}
+
+.choice input[type="checkbox"],
+.choice input[type="radio"] {
+    width: auto;             /* undo width:100% - checkbox stays small */
+    margin: 0;
+    flex-shrink: 0;          /* even if the label text is long, the checkbox never gets crushed */
+}
+
+.choice label {
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+#consentement {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+label[for="consentement"] {
+    vertical-align: middle;
+}
+
+
+#button {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #666BC8;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 200px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3b3e76;
+}
+
+.infos-pratique {
+    max-width: 500px;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.infos-pratique h2 {
+    color: #3b82f6;
+    margin-bottom: 12px;
+}
+
+.infos-pratique p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
 footer {
     background-color: #0a0d12;
     padding: 30px 20px 15px 20px;

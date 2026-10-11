@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="description" content="La première conférence dédiée aux développeurs web au Maroc.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https//font-awesome.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
     <title>Atlas Dev Days</title>
@@ -12,7 +11,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/images/Screenshot 2026-10-07 161023.png">
+            <img src="/assets/images/logo.png" alt="Logo Atlas Dev Days">
             <div class="title">
                 <p>Atlas Dev</p>
                 <p>Days</p>
@@ -26,55 +25,67 @@
         </nav>    
     </header>
     <main class="inscription-main">
-        <img src="/images/pexels-bbso-515173315-20733081.jpg" alt="Conference Audience">
+        <img src="/assets/images/pexels-bbso-515173315-20733081.jpg" alt="Conference Audience">
         <h1>Formulaire d'Inscription</h1>
         <form>
-            <label for="full name">nom complet :</label>
-            <input type="text" id="full name" placeholder="Entrez votre nom complet" required minlength="3"><br>
+            <label for="fullname">nom complet :</label>
+            <input type="text" id="fullname" placeholder="Entrez votre nom complet" required minlength="3">
 
             <label for="email">email :</label>
-            <input type="email" id="email" placeholder="Entrez votre email" required minlength="3"><br>
+            <input type="email" id="email" placeholder="Entrez votre email" required minlength="3">
 
-            <label for="Phone number">numéro de téléphone :</label>
-            <input type="tel" id="tel" name="tel" placeholder="Entrez votre numéro téléphone" required pattern="^(\+212|0)[5-7][0-9]{8}$"><br>
+            <label for="tel">numéro de téléphone :</label>
+            <input type="tel" id="tel" name="tel" placeholder="Entrez votre numéro téléphone" required pattern="^(\+212|0)[5-7][0-9]{8}$">
 
-            <label for="Profil">Profil :</label>
-            <select id="profil" required>
-                <option value="">Veuillez entrez votre profil :</option>
-                <option value="Etudiant">Etudient</option>
-                <option value="Developer">Developer</option>
-                <option value="programmer">Programmer</option>
+            <label for="profil">Profil :</label>
+            <select required>
+                <option value="" disabled selected>Veuillez choisir votre profil</option>
+                <option value="Etudiant">Etudient.e</option>
+                <option value="Developer">Developpeur.se</option>
                 <option value="Autre">Autre</option>
             </select>
-            <br>
 
-            <p>Ateliers</p>
-            <input type="checkbox" id="atelier1" name="atelier1" value="Atelier 1">
-            <label for="atelier1">Atelier 1: Maîtriser Flexbox et Grid sans Framework</label><br>
-            <input type="checkbox" id="atelier2" name="atelier2" value="Atelier 2">
-            <label for="atelier2">Atelier 2: Introduction à Node.js</label><br>
-            <input type="checkbox" id="atelier3" name="atelier3" value="Atelier 3">
-            <label for="atelier3">Atelier 3: Construire des APIs REST Robustes</label><br>
-            
+            <label for="ateliers">Ateliers :</label>
+            <div class="atelier-grp">
+                <div class="choice">
+                    <input type="checkbox" id="atelier1" name="atelier1" value="Atelier 1">
+                    <label for="atelier1">Atelier 1: Maîtriser Flexbox et Grid sans Framework</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" id="atelier2" name="atelier2" value="Atelier 2">
+                    <label for="atelier2">Atelier 2: Introduction à Node.js</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" id="atelier3" name="atelier3" value="Atelier 3">
+                    <label for="atelier3">Atelier 3: Construire des APIs REST Robustes</label>
+                </div>
+            </div>
+
             <label for="jour">Journée(s) de participation :</label>
             <div class="events-days">
-                <input type="radio" id="jour1" value="jour1" required> 
-                <label for="jour1">Jour 1 - 5 Octobre</label>
-                <input type="radio" id="jour2" value="jour2" required> 
-                <label for="jour">Jour 2 - 6 Octobre</label>
-                <input type="radio" id="both" value="deux jours" required> 
-                <label for="deux jours">Les deux</label>
+                <div class="choice">
+                    <input type="radio" id="jour1" name="jour" value="jour1" required>
+                    <label for="jour1">Jour 1 - 5 Octobre</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="jour2" name="jour" value="jour2" required>
+                    <label for="jour2">Jour 2 - 6 Octobre</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="both" name="jour" value="deux jours" required>
+                    <label for="both">Les deux</label>
+                </div>
             </div>
 
             <label for="message">Message</label>
-            <textarea type="text" placeholder="Laissez un message"></textarea>
+            <textarea id="message" placeholder="Laissez un message"></textarea>
 
             <input type="checkbox" id="consentement" name="consentement" required>
             <label for="consentement">J'accepte</label>
 
-            <button type="submit">S'inscrire</button>
+            <button type="submit" id="button">S'inscrire</button>
         </form>
-        <section>
+        <section class="infos-pratique">
             <h2>Informations pratique</h2>
             <P><strong>Adresse :</strong>📍 Atlas Conference Center, Nador</P>
             <P><strong>Horaires :</strong>⏰ 09:00 - 15:30</P>
